@@ -17,9 +17,6 @@
 }
 
 .nav-bar {
-    display: flex;
-    flex-direction: row;
-      
     width: 100%;
     padding: 20px;
  
@@ -28,12 +25,14 @@
  
 }
 
-.nav-bar li {
-    display: inline;
-    justify-content: center;       
-}
-
 .nav-bar ul {
+    display: flex;
+    flex-direction: row;
+    list-style-type: none;
+
+
+
+    flex-wrap: wrap;
     font-family: 'Inter', sans-serif;
     font-size: 18px;
     color: white;      
@@ -94,6 +93,13 @@ body {
     align-items: center;
     gap: 40px;
  
+}
+
+#world img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    object-position: bottom;
 }
 
 /*Barra de informação*/
@@ -166,5 +172,65 @@ footer {
     color:white;
     text-decoration:underline rgb(255, 255, 255) 3px; 
     
+}
+
+
+/* Media*/
+
+@media screen and (max-width: 1580px) {
+    .about
+    {
+        position: fixed;
+        left: 0px;
+        top: 20%;
+        padding: 15px;
+        width: 350px;
+    }
+}
+
+@media screen and (max-width: 1580px) {
+    #world
+    {
+        font-size: 70%;
+    }
+            
+}
+
+    
+
+
+@media screen and (max-width: 600px) {
+    .about
+    {
+        position: fixed;
+        left: 0px;
+        top: 20%;
+        padding: 15px;
+        width: 350px;
+    }
+    
+
+    #world img
+    {
+        width: 70%;
+    }
+
+    #world h1
+    {
+        font-size:medium;
+    }
+
+    .nav-bar ul
+    {
+        flex-direction: column !important;
+        gap: 12px;
+    }
+
+    ul li a:hover
+    {
+        padding: 4px 20px;
+    }
+
+
 }
 
